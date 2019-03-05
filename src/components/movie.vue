@@ -53,7 +53,7 @@ export default {
 
   .hidden {
     display: none;
-  }
+    }
 
   .front {
     @extend %center;

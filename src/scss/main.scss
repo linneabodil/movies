@@ -15,7 +15,6 @@ $header: 'Fira Sans';
 }
 
 .btn {
-  background: LightSteelBlue;
   color: White;
   padding: .5rem 1rem;
   margin: .25rem;
@@ -23,4 +22,14 @@ $header: 'Fira Sans';
   text-transform: uppercase;
   font-family: $header;
   border-radius: 3px;
+
+  &.blue {
+    background: DodgerBlue;
+  }
+  &.red {
+    background: Crimson;
+  }
+  &.green {
+    background: LimeGreen;
+  }
 }

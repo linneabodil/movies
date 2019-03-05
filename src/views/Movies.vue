@@ -3,9 +3,9 @@
   <h1>Movies</h1>
   <input type="text" v-model="search" placeholder="Search">
   <div class="sort">
-    <a href="#" class="btn" @click="showAll()">All</a>
-    <a href="#" class="btn" @click="showSeen()">Seen</a>
-    <a href="#" class="btn" @click="showUnseen()">Unseen</a>
+    <a href="#" class="btn blue" @click="showAll()">All</a>
+    <a href="#" class="btn green" @click="showSeen()">Seen</a>
+    <a href="#" class="btn red" @click="showUnseen()">Unseen</a>
   </div>
   <div class="wrapper">
     <movie v-for="(item, index) in movies" :key="index" :item="item" :class="item.sedd"/>
@@ -20,7 +20,7 @@ export default {
   name: 'movies',
   data() {
     return {
-      search: '',
+      search: " ",
       all: true,
       seen: false,
       unseen: false
@@ -95,16 +95,16 @@ export default {
 
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 1rem;
     max-width: 90vw;
   }
 
   .Nej {
-    border-top: 5px solid rgba($color: Crimson, $alpha: .5);
+    border-top: 8px solid Crimson;
   }
   .Ja {
-    border-top: 5px solid rgba($color: LimeGreen, $alpha: .5);
+    border-top: 8px solid LimeGreen;
   }
 
   @media screen and (max-width: 480px) {
